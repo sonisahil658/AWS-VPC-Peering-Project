@@ -17,6 +17,8 @@ Testing the connection using Ping commands
 
 This guide provides step-by-step instructions to ensure the correct setup.
 
+![image](https://github.com/user-attachments/assets/e4d9746d-697c-4291-bb36-c66d2db27140)
+
 Step 1: Creating the Test VPC
 
 1.1 Create a Test VPC
@@ -32,6 +34,8 @@ VPC Name: Test VPC
 IPv4 CIDR: 10.0.0.0/16
 
 Click Create VPC
+
+<img width="891" alt="Screenshot 2025-03-03 at 5 28 57 PM" src="https://github.com/user-attachments/assets/fbff044c-4598-4733-9afc-82c66e6600bb" />
 
 1.2 Create a Subnet in Test VPC
 
@@ -89,6 +93,14 @@ Click Save
 
 Now, your EC2 instance in Test VPC should be accessible via SSH.
 
+![image](https://github.com/user-attachments/assets/aaac927e-5a60-4049-b8cc-1b7ccc665bbe)
+
+![image](https://github.com/user-attachments/assets/129939a1-4249-4e2e-ac3e-78994a415d84)
+
+![image](https://github.com/user-attachments/assets/7b4bc953-9a1d-4eab-877f-0aa303549330)
+
+![image](https://github.com/user-attachments/assets/9842098d-41d6-451a-b3be-45c94952c961)
+
 Step 3: Setting Up the Prod VPC
 
 Repeat Step 1 and Step 2 for the Prod VPC with the following values:
@@ -102,6 +114,8 @@ Subnet CIDR: 192.168.1.0/24
 Internet Gateway: Prod-IGW
 
 Once done, launch an EC2 instance in Prod VPC and ensure connectivity.
+
+![image](https://github.com/user-attachments/assets/4744b489-cf7c-46c4-af32-f53c5611ddc6)
 
 Step 4: Establishing VPC Peering
 
@@ -121,6 +135,8 @@ Accepter VPC: Prod VPC
 
 Click Create Peering Connection
 
+![image](https://github.com/user-attachments/assets/428b9e19-3a5b-47be-8112-73cedc8b93dd)
+
 4.2 Accept the Peering Request
 
 Go to VPC Peering Connections
@@ -139,11 +155,17 @@ Target: Peering Connection
 
 Click Save
 
+<img width="1440" alt="Screenshot 2025-03-03 at 7 10 36 PM" src="https://github.com/user-attachments/assets/c0aa64c7-0c34-4dcb-9c3a-9bc33de92537" />
+
 Repeat the same steps for Prod VPC, adding a route for 10.0.0.0/16
 
 Step 5: Testing VPC Peering Connection
 
 Connect to the EC2 instance in Test VPC via SSH
+
+![image](https://github.com/user-attachments/assets/e1178b9f-221e-491f-b6cd-0a58e3ea5d37)
+
+![image](https://github.com/user-attachments/assets/142a6d8b-7a51-498b-9d4f-01ced206d59e)
 
 Run the following command to test connectivity with Prod VPC:
 
