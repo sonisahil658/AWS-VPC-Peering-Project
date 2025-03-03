@@ -171,7 +171,7 @@ Run the following command to test connectivity with Prod VPC:
 
 ping <Prod VPC EC2 Private IP>
 
-If the ping is successful, the VPC Peering setup is complete! 🎉
+If the ping is successful, the VPC Peering setup is complete! 
 
 Conclusion
 
